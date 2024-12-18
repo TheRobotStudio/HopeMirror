@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_Complete_Arm_44e.SLDASM">
+  <link
+    name="Chest">
+    <inertial>
+      <origin
+        xyz="0.0486539170160646 -0.0158260558409493 0.000849227187303221"
+        rpy="0 0 0" />
+      <mass
+        value="0.384797133375516" />
+      <inertia
+        ixx="0.000827350308515422"
+        ixy="2.51172274158082E-05"
+        ixz="-1.35395876461972E-05"
+        iyy="0.00102321616014153"
+        iyz="-5.76631141263241E-06"
+        izz="0.00129444186345337" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Chest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Chest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Shoulder_Pivot">
+    <inertial>
+      <origin
+        xyz="0.0472660352040359 -0.0137375443600315 0.00283006638351754"
+        rpy="0 0 0" />
+      <mass
+        value="0.517073056378261" />
+      <inertia
+        ixx="0.000953203129770561"
+        ixy="0.000270991772409371"
+        ixz="1.04047661559669E-05"
+        iyy="0.000795650582426599"
+        iyz="-4.51441680250378E-05"
+        izz="0.00116803621428185" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Shoulder_Pivot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Shoulder_Pivot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Pitch"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="Chest" />
+    <child
+      link="Shoulder_Pivot" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Shoulder_Hum">
+    <inertial>
+      <origin
+        xyz="-0.000679663769358699 0.00474632088645272 -0.0469193689786717"
+        rpy="0 0 0" />
+      <mass
+        value="0.169315310677218" />
+      <inertia
+        ixx="0.000277366936156619"
+        ixy="8.11081868823706E-07"
+        ixz="4.21668920697753E-06"
+        iyy="0.000250563922792207"
+        iyz="-2.87016786639683E-05"
+        izz="0.000182588527261188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Shoulder_Hum.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Shoulder_Hum.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Yaw"
+    type="continuous">
+    <origin
+      xyz="0.0844 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Shoulder_Pivot" />
+    <child
+      link="Shoulder_Hum" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Upper_Arm">
+    <inertial>
+      <origin
+        xyz="0.000146918760544609 -0.117029355469513 -0.00787431692258475"
+        rpy="0 0 0" />
+      <mass
+        value="1.37733794449701" />
+      <inertia
+        ixx="0.00748144452872091"
+        ixy="-2.33510085584971E-06"
+        ixz="3.56837433220179E-06"
+        iyy="0.00136578713824918"
+        iyz="-0.000191283941090138"
+        izz="0.00731931934322511" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Upper_Arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Upper_Arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Roll"
+    type="continuous">
+    <origin
+      xyz="0 -2.4268E-05 -0.065"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="Shoulder_Hum" />
+    <child
+      link="Upper_Arm" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Elbow">
+    <inertial>
+      <origin
+        xyz="0.0176518340383924 -0.020125492111251 -0.014865011197171"
+        rpy="0 0 0" />
+      <mass
+        value="0.352345424091274" />
+      <inertia
+        ixx="0.000649796864235185"
+        ixy="-0.000157783983908942"
+        ixz="0.000111546097845255"
+        iyy="0.000463562555958507"
+        iyz="9.03162634461677E-05"
+        izz="0.000737266163669184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Elbow.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_Flexion"
+    type="continuous">
+    <origin
+      xyz="0 -0.237 0"
+      rpy="0.04017 -0.17997 -1.3417" />
+    <parent
+      link="Upper_Arm" />
+    <child
+      link="Elbow" />
+    <axis
+      xyz="0.22339 0.97146 -0.07972" />
+  </joint>
+  <link
+    name="Forearm">
+    <inertial>
+      <origin
+        xyz="0.00133747937450716 -0.00599370747357174 0.0942985460788799"
+        rpy="0 0 0" />
+      <mass
+        value="0.846416236459816" />
+      <inertia
+        ixx="0.00299895167204582"
+        ixy="9.27955916697098E-06"
+        ixz="-1.47942653231755E-05"
+        iyy="0.00307229073678094"
+        iyz="0.000202544670567948"
+        izz="0.000673642046176671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wrist_Roll"
+    type="continuous">
+    <origin
+      xyz="0.054818 -0.014646 -0.027856"
+      rpy="-2.6917 1.3864 -2.9243" />
+    <parent
+      link="Elbow" />
+    <child
+      link="Forearm" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wrist_Proximal">
+    <inertial>
+      <origin
+        xyz="-5.2410298736344E-08 -0.01879886659832 -9.94505815060664E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0403794380308226" />
+      <inertia
+        ixx="1.22218350360084E-05"
+        ixy="1.1925341865885E-11"
+        ixz="-1.39543986184932E-11"
+        iyy="1.64063420282494E-05"
+        iyz="2.47555453996151E-11"
+        izz="1.35060026796524E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Wrist_Proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Wrist_Proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wrist_Pitch_01"
+    type="continuous">
+    <origin
+      xyz="0 -0.012 0.20395"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Forearm" />
+    <child
+      link="Wrist_Proximal" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Wrist_Distal">
+    <inertial>
+      <origin
+        xyz="2.10547095695623E-08 0.00549455984932445 -9.61281902689404E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.019964820760825" />
+      <inertia
+        ixx="3.01025349721734E-06"
+        ixy="-4.97878188646849E-12"
+        ixz="-6.51661357442016E-12"
+        iyy="3.40653141264907E-06"
+        iyz="3.36339839733877E-13"
+        izz="4.32184061652863E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Wrist_Distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Complete_Arm_44e.SLDASM/meshes/Wrist_Distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wrist_Yaw"
+    type="continuous">
+    <origin
+      xyz="0 -0.029 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="Wrist_Proximal" />
+    <child
+      link="Wrist_Distal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

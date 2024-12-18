@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_Thumb_64k.SLDASM">
+  <link
+    name="CMC_Proximal">
+    <inertial>
+      <origin
+        xyz="0.00883819250042111 -0.00369336218317498 -0.00218791633736805"
+        rpy="0 0 0" />
+      <mass
+        value="0.00129182705947473" />
+      <inertia
+        ixx="5.05912526929619E-08"
+        ixy="-3.17013356279515E-13"
+        ixz="-9.11046287038391E-13"
+        iyy="5.69650195238573E-08"
+        iyz="-2.16133418559341E-09"
+        izz="2.08976970387255E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/CMC_Proximal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/CMC_Proximal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="CMC_Distal">
+    <inertial>
+      <origin
+        xyz="7.90728546258557E-07 6.71093104155701E-05 -0.00418725968176794"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023151150301077" />
+      <inertia
+        ixx="5.20245040797807E-08"
+        ixy="-4.74368307404951E-14"
+        ixz="-2.3685982766405E-14"
+        iyy="6.84071256112861E-08"
+        iyz="-1.31447803779296E-10"
+        izz="6.09361284130216E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/CMC_Distal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/CMC_Distal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_Basal_Roll"
+    type="continuous">
+    <origin
+      xyz="0.0088382 0.0031885 0"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="CMC_Proximal" />
+    <child
+      link="CMC_Distal" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thumb_Knuckle">
+    <inertial>
+      <origin
+        xyz="-0.0250395531830131 0.00526752119345172 -1.05900375750936E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00843581173458002" />
+      <inertia
+        ixx="4.19452617739642E-07"
+        ixy="7.67800407278919E-08"
+        ixz="-3.24106518513954E-10"
+        iyy="2.25405017140097E-06"
+        iyz="-2.80027015562277E-11"
+        izz="2.12092774740041E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Knuckle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Knuckle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_Yaw"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0058238"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="CMC_Distal" />
+    <child
+      link="Thumb_Knuckle" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thumb_Middle">
+    <inertial>
+      <origin
+        xyz="-0.0192041887360864 0.000547738952617514 -1.70909600632485E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00540276459003736" />
+      <inertia
+        ixx="2.35147204312112E-07"
+        ixy="-1.41335907780382E-08"
+        ixz="1.13371451305994E-10"
+        iyy="6.11180513987054E-07"
+        iyz="2.15803164672234E-10"
+        izz="5.77845121656545E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Middle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Middle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_PIP"
+    type="continuous">
+    <origin
+      xyz="-0.05 0.004 0"
+      rpy="0 0 0" />
+    <parent
+      link="Thumb_Knuckle" />
+    <child
+      link="Thumb_Middle" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thumb_Tip">
+    <inertial>
+      <origin
+        xyz="-0.0116042467373323 0.000268719237497275 -1.64278441376793E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00380344330276905" />
+      <inertia
+        ixx="8.52603135782221E-08"
+        ixy="1.7467794464838E-08"
+        ixz="5.81500110697351E-10"
+        iyy="3.2373707961167E-07"
+        iyz="-7.5181169880407E-11"
+        izz="2.9892119274509E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Tip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Thumb_64k.SLDASM/meshes/Thumb_Tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_DIP"
+    type="continuous">
+    <origin
+      xyz="-0.04 0 0"
+      rpy="0 0 0.018378" />
+    <parent
+      link="Thumb_Middle" />
+    <child
+      link="Thumb_Tip" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

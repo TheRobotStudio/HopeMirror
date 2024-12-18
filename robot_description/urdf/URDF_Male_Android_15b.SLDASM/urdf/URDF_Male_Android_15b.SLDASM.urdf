@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_Male_Android_15b.SLDASM">
+  <link
+    name="Trunk">
+    <inertial>
+      <origin
+        xyz="-0.000288929769199511 0.35619961643186 -1.12102794831557E-05"
+        rpy="0 0 0" />
+      <mass
+        value="4.28371529747128" />
+      <inertia
+        ixx="0.022983985560883"
+        ixy="-0.000121350281025128"
+        ixz="8.18169564782636E-06"
+        iyy="0.00706209432293559"
+        iyz="4.3435222365156E-06"
+        izz="0.0236456267921383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Trunk.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Trunk.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Thighs">
+    <inertial>
+      <origin
+        xyz="-1.26768672215037E-08 5.91772229090142E-05 0.210525498253032"
+        rpy="0 0 0" />
+      <mass
+        value="2.49219996304741" />
+      <inertia
+        ixx="0.010510652243601"
+        ixy="5.40215542172654E-11"
+        ixz="2.10157062321765E-10"
+        iyy="0.00931324935898725"
+        iyz="0.000110212311726466"
+        izz="0.00331152787396336" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Thighs.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Thighs.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Hips"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="Trunk" />
+    <child
+      link="Thighs" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="Joined_Base">
+    <inertial>
+      <origin
+        xyz="0.000319888278323557 -0.000121027068038494 -0.30479789256348"
+        rpy="0 0 0" />
+      <mass
+        value="2.50741004401563" />
+      <inertia
+        ixx="0.0125539197613347"
+        ixy="-4.10062415229489E-11"
+        ixz="8.03564460988525E-05"
+        iyy="0.0119106728832357"
+        iyz="-4.11872459183478E-11"
+        izz="0.00576727361949057" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Joined_Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Joined_Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Knees"
+    type="continuous">
+    <origin
+      xyz="0 0 0.39"
+      rpy="-3.1416 0 -1.5708" />
+    <parent
+      link="Thighs" />
+    <child
+      link="Joined_Base" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Right_Wheel">
+    <inertial>
+      <origin
+        xyz="0 0.0249301764497238 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.11472878874456" />
+      <inertia
+        ixx="0.00322054319518712"
+        ixy="-3.82882023253984E-18"
+        ixz="-5.42101086242752E-19"
+        iyy="0.00606959553066417"
+        iyz="-6.92813034376943E-19"
+        izz="0.00322054319518712" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Right_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Right_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Drive"
+    type="continuous">
+    <origin
+      xyz="0.00535 -0.2121 -0.44925"
+      rpy="0 -0.64764 3.1416" />
+    <parent
+      link="Joined_Base" />
+    <child
+      link="Right_Wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Left_Wheel">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0.0249301764497238 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.11472878874456" />
+      <inertia
+        ixx="0.00322054319518712"
+        ixy="2.21849691132144E-18"
+        ixz="4.33680868994201E-19"
+        iyy="0.00606959553066418"
+        iyz="5.95048088649618E-20"
+        izz="0.00322054319518712" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Left_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/Left_Wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Drive"
+    type="continuous">
+    <origin
+      xyz="0.00535 0.21145 -0.44925"
+      rpy="3.1416 -1.3503 -3.1416" />
+    <parent
+      link="Joined_Base" />
+    <child
+      link="Left_Wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="IMU_01">
+    <inertial>
+      <origin
+        xyz="-2.04271395162835E-11 9.47516646855329E-05 0.00149700438277225"
+        rpy="0 0 0" />
+      <mass
+        value="0.00161296300164692" />
+      <inertia
+        ixx="9.53749826630716E-08"
+        ixy="-7.99626490475066E-17"
+        ixz="-7.202239691808E-16"
+        iyy="5.59429481187672E-08"
+        iyz="5.8600682221541E-09"
+        izz="1.48156669855035E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/IMU_01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF_Male_Android_15b.SLDASM/meshes/IMU_01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="IMU"
+    type="fixed">
+    <origin
+      xyz="0.029 0 0.49205"
+      rpy="-1.5076 0 -1.5708" />
+    <parent
+      link="Trunk" />
+    <child
+      link="IMU_01" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
